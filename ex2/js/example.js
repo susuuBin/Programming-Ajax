@@ -30,7 +30,7 @@ var today;  // 오늘 날짜
 var elEnds; // 메시지를 출력할 요소
 
 function offerExpires(today){
-    var weekFromToday, day, date, month, year, dayName, monthNames;
+    var weekFromToday, day, date, month, year, dayNames, monthNames;
 
     // 날짜에 7 을 더한다. (7 일에 해당하는 밀리 초를 더한다.)
     weekFromToday = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
@@ -40,14 +40,14 @@ function offerExpires(today){
     monthNames = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
 
     // 페이지에 날짜를 출력하기 위해 날짜의각 부분 값을 가져온다.
-    day = dayName[weekFromToday.getDay()];
+    day = dayNames[weekFromToday.getDay()];
     date = weekFromToday.getDate();
     month = monthNames[weekFromToday.getMonth()];
     year = weekFromToday.getFullYear();
 
     // 메시지를 생성한다.
     expirtMsg = '할인 행사는 ';
-    expirtMsg += day + ' 에 마감됩니다. <br> (' + year + ' 년' + month + ' ' + date + ' 일)';
+    expirtMsg += day + '에 마감됩니다. <br> (' + year + ' 년 ' + month + ' ' + date + ' 일)';
     return expirtMsg;
 }
 
