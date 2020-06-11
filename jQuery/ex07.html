@@ -2,18 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> $("tag1, tag2") 선택자 실습 </title>
+        <title> $("parent > child") 선택자 실습 </title>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("div, span, p.myClass").css("color", "red");
-            });
-        </script>
+    <script>
+        $(document).ready(function(){
+            $("ul.topanv > li").css("border", "3px double red");
+            console.log($("ul.topanv > li").length);
+        });
+    </script>
     </head>
     <body>
-        <div> div </div>
-        <p class="myClass"> p class="myClass" </p>
-        <p class="notMyClass"> p class="notMyClass" </p>
-        <span> span </span>
+        <ul class="topanv">
+            <li> 아이템 1 </li>
+            <li> 아이템 2 
+                <ul>
+                    <li> 중첩 아이템 1 </li>
+                    <li> 중첩 아이템 2 </li>
+                    <li> 중첩 아이템 3 </li>
+                </ul>
+            </li>
+            <li> 아이템 3 </li>
+        </ul>
     </body>
 </html>

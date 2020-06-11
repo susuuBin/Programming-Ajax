@@ -2,18 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> $(".class.otherClass") 선택자 실습 </title>
+        <title> $("tag1, tag2") 선택자 실습 </title>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script>
             $(document).ready(function(){
-                $(".myClass").css("border", "2px solid blue");
-                $(".myClass.otherClass").css("color", "red");
+                $("div, span, p.myClass").css("color", "red");
             });
         </script>
     </head>
     <body>
-        <div class="myClass"> div class="notMe" </div>
-        <div class="myClass otherClass"> div class="myClass" </div>
-        <span class="myClass otherClass"> span class="myClass" </span>
+        <div> div </div>
+        <p class="myClass"> p class="myClass" </p>
+        <p class="notMyClass"> p class="notMyClass" </p>
+        <span> span </span>
     </body>
 </html>
