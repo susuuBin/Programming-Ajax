@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>:even 및 :odd Filter Selector</title>
+<script type="text/javascript" src="jquery-3.5.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("tr:even").css("background-color", "#bbf");
+  $("tr:odd").css("font-size", "20px");
+});
+</script>
+</head>
+<body>
+ <table border="1">
+  <tr><td>인덱스 0</td></tr>
+  <tr><td>인덱스 1</td></tr>
+  <tr><td>인덱스 2</td></tr>
+  <tr><td>인덱스 3</td></tr>
+</table>
+</body>
+</html>
