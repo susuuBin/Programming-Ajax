@@ -5,9 +5,9 @@
 <title>$(“selector[attr^=‘value']") 선택자 실습</title>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-    $("a[href ^= 'https']").css("font-size", "40px");
-    $("a[href $= 'net']").css("color", "red");
+$(function(){
+    $("a[href^='https://naver.com']").css("font-size", "30px");
+    $("a[href$='http://daum.net']").css("color", "red");
 });
 
 </script>

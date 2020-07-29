@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>:button,:enable,:disable Filter Selector</title>
-<script type="text/javascript" src="jquery-3.5.1.js"></script>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
+$(function(){
   $(":button").css("border", "3px red solid");
-  $("#disable").click(function(){
-    $("input[type='text']:enabled").removeAttr("enabled");
-    $("input[type='text']:enabled").attr("disabled", "disabled");
-  });
 
   $("#enable").click(function(){
     $("input[type='text']:disabled").removeAttr("disabled");
     $("input[type='text']:disabled").attr("enabled", "enabled");
+  });
+
+  $("#disable").click(function(){
+    $("input[type='text']:enabled").removeAttr("enabled");
+    $("input[type='text']:enabled").attr("disabled", "disabled");
   });
 
   $("form").submit(function(event){

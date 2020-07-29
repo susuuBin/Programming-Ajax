@@ -5,9 +5,9 @@
         <title> $("parent > child") 선택자 실습 </title>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(function(){
             $("ul.topanv > li").css("border", "3px double red");
-            console.log($("ul.topanv > li").length);
+            console.log("ul.topanv 의 li 태그의 길이 : " + $("ul.topanv > li").length);
         });
     </script>
     </head>

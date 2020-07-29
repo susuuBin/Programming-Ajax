@@ -19,17 +19,20 @@
   </style>
 
 
-<script src="jquery-3.5.1.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){     
-  $( "#run" ).click(function() {
-       $( ":animated" ).toggleClass("toggleWidth");
-     });      
-     function animateIt() {
-       $( "#ani" ).slideToggle( "slow", animateIt );
-     } 
-     animateIt();
-   });
+  $(function() {
+    $("#run").click(function(){
+      $(":animated").toggleClass("toggleWidth");
+    });
+
+    function animated(){
+      $("#ani").slideToggle("slow", animated);
+    }
+
+    animated();
+
+  });
 </script>
 </head>
 <body>
